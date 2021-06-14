@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="PatchUpdate" />
+		<Description value="A mod to capture keyboard input safely." />
+		<Author value="KPro"/>
+		<Version value="A19.3" />
+	</ModInfo>
+</xml>
