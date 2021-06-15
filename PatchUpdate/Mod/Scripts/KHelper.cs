@@ -7,7 +7,7 @@ using Microsoft.SqlServer.Server;
 using UnityEngine;
 using Random = System.Random;
 
-namespace kScripts
+namespace KPatchUpdate
 {
     public enum LogLevel
     {
@@ -36,6 +36,10 @@ namespace kScripts
             }
         }
 
+        public static EntityPlayerLocal GetEntityPlayer()
+        {
+            return GameManager.Instance.World.GetPrimaryPlayer();
+        }
         public static void EasyLog(string msg, LogLevel log)
         {
             if (log == LogLevel.Both || log == LogLevel.Chat)

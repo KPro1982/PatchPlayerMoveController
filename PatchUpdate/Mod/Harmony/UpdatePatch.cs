@@ -1,5 +1,5 @@
 ﻿using HarmonyLib;
-using PatchUpdate;
+using KPatchUpdate;
 
 [HarmonyPatch(typeof(PlayerMoveController))]
 [HarmonyPatch("Update")]
@@ -9,9 +9,9 @@ class Patch
     {
         if (__instance.playerInput.Prefab.WasPressed)
         {
-            // your stuff here
-            KProCustomRadial.KProSetupRadial();
-            return false;
+            KReadXml.GetXml();
+            // KProCustomRadial.KProSetupRadial();
+            
         }
         return true;
 
