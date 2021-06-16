@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -42,16 +42,13 @@
         <Reference Include="DMT, Version=2.2.7569.26209, Culture=neutral, PublicKeyToken=null">
             <HintPath>..\..\7days-binaries\DMT.dll</HintPath>
         </Reference>
-        <Reference Include="InControl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\7days-binaries\InControl.dll</HintPath>
-        </Reference>
         <Reference Include="LogAnywhere, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
             <HintPath>..\..\7days-binaries\LogAnywhere.dll</HintPath>
         </Reference>
-        <Reference Include="System" />
-        <Reference Include="System.Core" />
-        <Reference Include="System.Data" />
-        <Reference Include="System.Xml" />
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
         <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <HintPath>..\..\7days-binaries\UnityEngine.dll</HintPath>
         </Reference>
@@ -60,11 +57,11 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Mod\Scripts\*.cs" />
-        <Compile Include="Mod\Harmony\*.cs" />
-        <Compile Include="Modlets\*.*" />
+        <Compile Include="Mod\Scripts\*.cs"/>
+        <Compile Include="Mod\Harmony\*.cs"/>
+        <Compile Include="Modlets\*.*"/>
     </ItemGroup>
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <PropertyGroup>
         <PostBuildEvent>
             echo Generating Release Folder for $(ProjectName)

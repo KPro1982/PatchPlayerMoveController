@@ -1,0 +1,3 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+KTeleport,Items,Melee,,,"A strange looking object."
+KTeleportDesc,Items,Melee,,,"It looks like it could take you places."
