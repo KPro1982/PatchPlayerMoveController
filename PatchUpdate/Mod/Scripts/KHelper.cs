@@ -7,7 +7,7 @@ using Microsoft.SqlServer.Server;
 using UnityEngine;
 using Random = System.Random;
 
-namespace kScripts
+namespace KScripts
 {
     public enum LogLevel
     {

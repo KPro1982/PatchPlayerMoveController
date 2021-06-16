@@ -1,19 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using HarmonyLib;
-using KPatchUpdate;
+﻿using HarmonyLib;
+using KCustomRadial;
+
 
 [HarmonyPatch(typeof(PlayerMoveController))]
 [HarmonyPatch("Update")]
 class Patch
 {
-    public static bool Prefix(PlayerMoveController __instance )
+    public static bool Prefix(PlayerMoveController __instance, LocalPlayerUI ___playerUI, EntityPlayerLocal ___entityPlayerLocal)
     {
-        
         if (__instance.playerInput.Prefab.WasPressed)
-        { 
-            KProCustomRadial.Test();
-            KHelper.EasyLog("K was pressed.", LogLevel.Chat);
+        {
+            // your stuff here
+            XUiC_Radial _xuiRadialWindow = ___playerUI.xui.RadialWindow;
+            KProCustomRadial.KSetupRadial(__instance, _xuiRadialWindow, ___entityPlayerLocal);
+            			
+
+            return false;
         }
         return true;
 
