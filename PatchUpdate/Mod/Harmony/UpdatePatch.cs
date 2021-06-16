@@ -1,4 +1,6 @@
-﻿using HarmonyLib;
+﻿using System;
+using System.Collections.Generic;
+using HarmonyLib;
 using KPatchUpdate;
 
 [HarmonyPatch(typeof(PlayerMoveController))]
@@ -7,11 +9,11 @@ class Patch
 {
     public static bool Prefix(PlayerMoveController __instance )
     {
+        
         if (__instance.playerInput.Prefab.WasPressed)
-        {
-            KReadXml.GetXml();
-            // KProCustomRadial.KProSetupRadial();
-            
+        { 
+            KProCustomRadial.Test();
+            KHelper.EasyLog("K was pressed.", LogLevel.Chat);
         }
         return true;
 
